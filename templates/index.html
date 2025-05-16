@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Выбери действие</h1>
+    <div>
+        <h2>Создать задачу</h2>
+        <form method="post" action="/tasks">
+            <div class="input">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="input">
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description">
+            </div>
+            <div class="input">
+                <label for="user_name">Name</label>
+                <input type="text" name="user_name" id="user_name">
+            </div>
+            <div class="input">
+                <label for="user_surname">Surname</label>
+                <input type="text" name="user_surname" id="user_surname">
+            </div>
+            <button type="submit">Создать</button>
+        </form>
+    </div>
+    <div>
+        <h2>Получить задачи пользователя</h2>
+        <form method="get" action="/tasks">
+            <div class="input">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="input">
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname">
+            </div>
+            <button type="submit">Получить</button>
+        </form>
+    </div>
+    <div>
+        <h2>Получить все задачи</h2>
+        <form method="get" action="/tasks/all">
+            <button type="submit">Получить</button>
+        </form>
+    </div>
+    <div>
+        <h2>Получить задачу по id</h2>
+        <form id="get-task-form">
+            <div class="input">
+                <label for="task-id">Id</label>
+                <input type="text" name="id" id="task-id">
+            </div>
+            <button type="submit">Получить</button>
+        </form>
+    </div>
+    <div>
+        <h2>Обновить задачу</h2>
+        <form id="patch-task-form">
+            <div class="input">
+                <label for="patch-task-id">ID задачи</label>
+                <input type="number" id="patch-task-id" name="task_id">
+            </div>
+            <div class="input">
+                <label for="patch-title">Заголовок</label>
+                <input type="text" id="patch-title" name="title">
+            </div>
+            <div class="input">
+                <label for="patch-description">Описание</label>
+                <input type="text" id="patch-description" name="description">
+            </div>
+            <button type="submit">Обновить</button>
+        </form>
+    </div>
+    <div>
+        <h2>Удалить задачу по id</h2>
+        <form id="delete-task-form">
+            <div class="input">
+                <label for="task-id">Id</label>
+                <input type="number" name="id" id="delete-task-id">
+            </div>
+            <button type="submit">Удалить</button>
+        </form>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input label {
+    width: 100px;
+    display: inline-block;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 5px;
+}
